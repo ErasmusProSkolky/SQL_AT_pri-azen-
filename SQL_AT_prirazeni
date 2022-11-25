@@ -7,7 +7,7 @@ latitude FLOAT,
 longitude FLOAT,
 vzdalenost_od_hranic INT);
 
---nahrani dat do tabulky a jejich zobrazeni
+--nasledovalo nahrani dat do tabulky a jejich zobrazeni
 SELECT *
 FROM AT_ADRESY_NEW;
 
@@ -17,7 +17,7 @@ POCET_SKOLEK INT,
 POCET_DETI INT,
 POCET_MIX_VEK INT);
 
---nahrani dat do tabulky a jejich zobrazeni
+--nasledovalo nahrani dat do tabulky a jejich zobrazeni
 SELECT *
 FROM AT_POCET;
 
