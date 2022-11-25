@@ -1,0 +1,28 @@
+CREATE OR REPLACE TABLE AT_ADRESY_NEW(
+stat VARCHAR(255),
+nazev VARCHAR(255),
+adresa VARCHAR(255),
+mesto VARCHAR(255),
+latitude FLOAT,
+longitude FLOAT,
+vzdalenost_od_hranic INT);
+
+--nahrani dat do tabulky a jejich zobrazeni
+SELECT *
+FROM AT_ADRESY_NEW;
+
+CREATE OR REPLACE TABLE AT_POCET(
+mesto VARCHAR(255),
+POCET_SKOLEK INT,
+POCET_DETI INT,
+POCET_MIX_VEK INT);
+
+--nahrani dat do tabulky a jejich zobrazeni
+SELECT *
+FROM AT_POCET;
+
+SELECT at.*,
+pocet.*
+FROM AT_ADRESY_NEW AS at
+LEFT JOIN AT_POCET AS pocet
+ON at.MESTO = pocet.MESTO;
